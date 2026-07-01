@@ -42,7 +42,6 @@ public class task1 {
 }
 
 // Task 2
-
 import java.util.*;
 
 public class task2 {

@@ -1,0 +1,112 @@
+// Task 1
+import java.util.*;
+
+public class task1 {
+    public static void main (String [] args ) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt(); 
+        int b = sc.nextInt();
+        
+        int low;
+        int high;
+
+        if ( a < b ) { 
+            low = a;
+            high = b;
+        }
+        else {
+            low = b;
+            high = a;
+        }
+
+        int count = 0;
+
+        for (int i = low+1; i < high; i++) { 
+            boolean prime = true;
+            if (i < 2){
+                prime = false;
+            }
+            else {
+                for (int j = 2; j * j <= i; j++) {
+                    if (i % j == 0) {
+                        prime = false;
+                    }
+                }
+            }
+            if (prime) {
+                count++;
+            }
+        }
+        System.out.println("There are "+ count +" prime numbers between "+ low + " and "+ high + ".");
+    }
+}
+
+// Task 2
+
+import java.util.*;
+
+public class task2 {
+    public static void main (String [] args ) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String result = "";
+
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            char prev;
+            if ( ch == 'a') {
+                prev = 'z';                
+            }
+            else {
+                prev = (char)(ch-1);
+            }
+        result += prev;
+        }
+    System.out.println(result);
+    }
+}
+
+// Task 3
+import java.util.*;
+
+public class task3 {
+    public static void main (String [] args ) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+ 
+        boolean[] counted = new boolean[n];
+ 
+        for (int i = 0; i < n; i++) {
+            if (!counted[i]) {
+                int count = 1;
+                for (int j = i + 1; j < n; j++) {
+                    if (arr[j] == arr[i]) {
+                        count++;
+                        counted[j] = true;
+                    }
+                }
+                System.out.println(arr[i] + " - " + count + " times");
+            }
+        }
+    }
+}
+
+// Task 4
+package task4;
+
+public class Course {
+    String courseName;
+    String courseCode;
+    int credit = 0;
+}
+
+// Task 5
+package task5;
+
+public class CSECourse {
+    String courseName = "Programming Language II";
+    String courseCode = "CSE111";
+    int credit = 3;
+}

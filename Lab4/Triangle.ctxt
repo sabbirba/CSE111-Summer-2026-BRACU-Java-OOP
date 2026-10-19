@@ -1,0 +1,11 @@
+#BlueJ class context
+#Thu Jul 23 08:13:35 BDT 2026
+comment0.target=Triangle
+comment1.params=side1 side2 side3
+comment1.target=Triangle(int, int, int)
+comment2.target=int getPerimeter()
+comment3.target=void triangleDetails()
+comment4.target=java.lang.String printTriangleType()
+comment5.params=other
+comment5.target=void compareTriangles(Triangle)
+numComments=6
